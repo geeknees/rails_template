@@ -1,4 +1,5 @@
 after_bundle do
+  run 'bundle exec rails generate rspec:install'
   git :init
   git add: "."
   git commit: %Q{ -m 'Initial commit' }
@@ -6,6 +7,7 @@ end
 
 gem 'clockwork'
 gem 'hamlit'
+gem 'hamlit-rails'
 gem 'high_voltage'
 gem 'rack-cors'
 gem 'rack-rewrite'
